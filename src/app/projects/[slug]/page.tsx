@@ -407,7 +407,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
   const contactPhone = contactDetails.phonePrimary.replace(/\s/g, "");
 
   return (
-    <article className="bg-white pt-[3.25rem] text-navy sm:pt-14 lg:pt-16">
+    <article className="pt-[3.25rem] text-navy sm:pt-14 lg:pt-16">
       <section className="relative min-h-[32rem] overflow-hidden bg-navy pt-16 text-white md:min-h-[35rem] md:pt-20">
         <Image src={project.image} alt={project.name} fill priority className="object-cover" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(47,65,86,0.90)_0%,rgba(47,65,86,0.72)_30%,rgba(47,65,86,0.22)_68%,rgba(47,65,86,0.08)_100%)]" />
@@ -439,13 +439,13 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
       <section className="relative z-20 -mt-14">
         <div className="container-soft">
-          <div className="grid gap-0 overflow-hidden rounded-2xl border border-navy/12 bg-[linear-gradient(135deg,#FFFFFF_0%,#F5EFEB_54%,#C8D9E6_100%)] px-4 py-5 shadow-[0_24px_60px_rgba(47,65,86,0.16)] sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-0 overflow-hidden rounded-2xl border border-white/55 bg-[linear-gradient(135deg,#eee7e2_0%,#e2d8d2_54%,#bacdd6_100%)] px-4 py-5 shadow-[0_26px_68px_rgba(47,65,86,0.26)] sm:grid-cols-2 lg:grid-cols-5">
             {stats.map((stat, index) => (
               <div
                 key={`${stat.value}-${index}`}
                 className="flex items-center gap-4 px-4 py-3 sm:border-r sm:border-navy/12 sm:last:border-r-0 lg:px-6"
               >
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white text-teal shadow-[0_10px_22px_rgba(47,65,86,0.10)] ring-1 ring-navy/10">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#eee7e2] text-teal shadow-[0_10px_22px_rgba(47,65,86,0.18)] ring-1 ring-white/55">
                   <StatIconMark icon={stat.icon} />
                 </span>
                 <div>
@@ -470,27 +470,27 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {project.amenities.slice(0, 4).map((amenity) => (
-                <span key={amenity} className="rounded-lg border border-navy/10 bg-beige px-5 py-3 text-sm font-bold text-navy">
+                <span key={amenity} className="rounded-lg border border-white/50 bg-[#bacdd6]/76 px-5 py-3 text-sm font-bold text-navy shadow-[0_10px_24px_rgba(47,65,86,0.12)]">
                   {amenity}
                 </span>
               ))}
             </div>
           </div>
 
-          <aside className="rounded-2xl border border-navy/10 bg-[linear-gradient(180deg,#F5EFEB_0%,#FFFFFF_100%)] p-5 shadow-card">
+          <aside className="rounded-2xl border border-white/55 bg-[linear-gradient(145deg,rgba(238,231,226,0.96),rgba(186,205,214,0.86))] p-5 shadow-[0_20px_54px_rgba(47,65,86,0.24)]">
             <h3 className="text-2xl font-extrabold tracking-[-0.03em] text-navy">Enquire Now</h3>
             <div className="mt-5 grid gap-3">
-              <input className="rounded-lg border border-navy/10 bg-white px-4 py-3 text-sm outline-none focus:border-teal" placeholder="Your Name" />
-              <input className="rounded-lg border border-navy/10 bg-white px-4 py-3 text-sm outline-none focus:border-teal" placeholder="Mobile Number" />
-              <input className="rounded-lg border border-navy/10 bg-white px-4 py-3 text-sm outline-none focus:border-teal" placeholder="Email Address" />
-              <select className="rounded-lg border border-navy/10 bg-white px-4 py-3 text-sm outline-none focus:border-teal" defaultValue="">
+              <input className="rounded-lg border border-white/55 bg-[#f2ece8]/55 px-4 py-3 text-sm outline-none focus:border-teal" placeholder="Your Name" />
+              <input className="rounded-lg border border-white/55 bg-[#f2ece8]/55 px-4 py-3 text-sm outline-none focus:border-teal" placeholder="Mobile Number" />
+              <input className="rounded-lg border border-white/55 bg-[#f2ece8]/55 px-4 py-3 text-sm outline-none focus:border-teal" placeholder="Email Address" />
+              <select className="rounded-lg border border-white/55 bg-[#f2ece8]/55 px-4 py-3 text-sm outline-none focus:border-teal" defaultValue="">
                 <option value="" disabled>I&apos;m interested in</option>
                 <option>{project.name}</option>
                 <option>Site Visit</option>
                 <option>Brochure</option>
               </select>
               <Link href="/contact" className="btn-primary text-center">Schedule Site Visit</Link>
-              <a href={`https://wa.me/${contactPhone.replace("+", "")}`} className="rounded-lg border border-teal/35 bg-white px-4 py-3 text-center text-sm font-extrabold text-teal transition hover:bg-teal hover:text-white">
+              <a href={`https://wa.me/${contactPhone.replace("+", "")}`} className="rounded-lg border border-teal/35 bg-[#eee7e2]/78 px-4 py-3 text-center text-sm font-extrabold text-teal transition hover:bg-teal hover:text-white">
                 Chat on WhatsApp
               </a>
             </div>
@@ -506,8 +506,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           </div>
           <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8">
             {amenitySet.map((amenity) => (
-              <div key={amenity.label} className="rounded-xl border border-navy/10 bg-white p-4 text-center shadow-[0_10px_26px_rgba(47,65,86,0.07)]">
-                <span className="mx-auto grid h-11 w-11 place-items-center rounded-full bg-beige text-teal ring-1 ring-navy/8">
+              <div key={amenity.label} className="rounded-xl border border-white/55 bg-[linear-gradient(145deg,rgba(238,231,226,0.94),rgba(186,205,214,0.78))] p-4 text-center shadow-[0_16px_38px_rgba(47,65,86,0.2)]">
+                <span className="mx-auto grid h-11 w-11 place-items-center rounded-full bg-[#eee7e2] text-teal ring-1 ring-white/55">
                   <AmenityIconMark icon={amenity.icon} />
                 </span>
                 <p className="mt-3 text-xs font-bold text-navy">{amenity.label}</p>
@@ -530,8 +530,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               </div>
             </div>
             <div className="flex gap-2">
-              <button className="grid h-10 w-10 place-items-center rounded-full border border-navy/10 bg-beige text-navy">‹</button>
-              <button className="grid h-10 w-10 place-items-center rounded-full border border-navy/10 bg-beige text-navy">›</button>
+              <button className="grid h-10 w-10 place-items-center rounded-full border border-white/50 bg-[#bacdd6]/76 text-navy">‹</button>
+              <button className="grid h-10 w-10 place-items-center rounded-full border border-white/50 bg-[#bacdd6]/76 text-navy">›</button>
             </div>
           </div>
           <div className="grid gap-5 md:grid-cols-4">
@@ -552,13 +552,13 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             {floorPlans.map((plan) => (
-              <div key={plan.title} className="rounded-2xl border border-navy/10 bg-white p-5 shadow-card">
+              <div key={plan.title} className="rounded-2xl border border-white/55 bg-[linear-gradient(145deg,rgba(238,231,226,0.94),rgba(186,205,214,0.8))] p-5 shadow-[0_18px_46px_rgba(47,65,86,0.22)]">
                 <h3 className="text-lg font-extrabold tracking-[-0.02em] text-navy">{plan.title}</h3>
                 <div className="mt-2 flex flex-wrap gap-4 text-xs font-bold text-muted">
                   <span>{plan.configuration}</span>
                   <span>{plan.area}</span>
                 </div>
-                <div className="relative mt-5 aspect-[1.7] overflow-hidden rounded-lg bg-beige">
+                <div className="relative mt-5 aspect-[1.7] overflow-hidden rounded-lg bg-[#f2ece8]/58">
                   <Image src={plan.image} alt={plan.title} fill className="object-contain p-2" />
                 </div>
                 <div className="mt-5 flex items-center justify-between gap-4">
@@ -573,7 +573,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </div>
       </section>
 
-      <section className="section-pad bg-[linear-gradient(180deg,#FFFFFF_0%,#EEF5F8_100%)]">
+      <section className="section-pad">
         <div className="container-soft grid gap-8 lg:grid-cols-[0.75fr_1.3fr_0.65fr]">
           <div>
             <h2 className="text-3xl font-extrabold tracking-[-0.035em] text-navy">
@@ -585,7 +585,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               ))}
             </div>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-card">
+          <div className="overflow-hidden rounded-2xl border border-white/55 bg-[#eee7e2]/78 shadow-[0_18px_46px_rgba(47,65,86,0.2)]">
             <iframe
               title={`${project.name} map`}
               src={`https://www.google.com/maps?q=${encodeURIComponent(project.location)}&output=embed`}
@@ -595,7 +595,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           </div>
           <div className="grid gap-4">
             {nearby.map(([name, time]) => (
-              <div key={name} className="rounded-xl border border-navy/10 bg-white p-5 shadow-[0_10px_26px_rgba(47,65,86,0.08)]">
+              <div key={name} className="rounded-xl border border-white/55 bg-[linear-gradient(145deg,rgba(238,231,226,0.94),rgba(186,205,214,0.78))] p-5 shadow-[0_16px_38px_rgba(47,65,86,0.2)]">
                 <p className="font-extrabold text-navy">{name}</p>
                 <p className="text-sm font-bold text-muted">{time}</p>
               </div>
@@ -609,8 +609,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           <h2 className="text-3xl font-extrabold tracking-[-0.035em] text-navy">Why Choose {project.name}?</h2>
           <div className="mt-6 grid gap-5 md:grid-cols-4">
             {whyChoose.map(([title, copy]) => (
-              <div key={title} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-card">
-                <span className="grid h-12 w-12 place-items-center rounded-full bg-beige text-sm font-extrabold text-teal">
+              <div key={title} className="rounded-2xl border border-white/55 bg-[linear-gradient(145deg,rgba(238,231,226,0.94),rgba(186,205,214,0.8))] p-6 shadow-[0_18px_46px_rgba(47,65,86,0.22)]">
+                <span className="grid h-12 w-12 place-items-center rounded-full bg-[#eee7e2] text-sm font-extrabold text-teal">
                   {title.slice(0, 1)}
                 </span>
                 <h3 className="mt-4 font-extrabold text-navy">{title}</h3>

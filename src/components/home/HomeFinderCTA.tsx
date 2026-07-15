@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export function HomeFinderCTA() {
   return (
-    <section className="bg-white pb-16">
-      <div className="container-soft overflow-hidden rounded-2xl bg-navy text-white shadow-soft">
+    <section className="pb-16">
+      <div className="container-soft overflow-hidden rounded-2xl bg-[radial-gradient(circle_at_18%_0%,rgba(200,217,230,0.2),transparent_32%),linear-gradient(135deg,#243446_0%,#3a586d_100%)] text-white shadow-soft">
         <div className="grid items-stretch gap-0 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="p-8 md:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky">
@@ -22,12 +22,12 @@ export function HomeFinderCTA() {
               <span>Best Options For You</span>
             </div>
           </div>
-          <div className="bg-white p-6 text-ink md:p-8">
+          <div className="bg-[linear-gradient(145deg,rgba(238,231,226,0.96),rgba(186,205,214,0.88))] p-6 text-ink md:p-8">
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-lg bg-mist px-4 py-3 text-sm text-muted">Your Name</div>
-              <div className="rounded-lg bg-mist px-4 py-3 text-sm text-muted">Mobile Number</div>
-              <div className="rounded-lg bg-mist px-4 py-3 text-sm text-muted">Looking For</div>
-              <div className="rounded-lg bg-mist px-4 py-3 text-sm text-muted">Preferred Location</div>
+              <div className="rounded-lg border border-white/55 bg-[#f2ece8]/55 px-4 py-3 text-sm text-muted">Your Name</div>
+              <div className="rounded-lg border border-white/55 bg-[#f2ece8]/55 px-4 py-3 text-sm text-muted">Mobile Number</div>
+              <div className="rounded-lg border border-white/55 bg-[#f2ece8]/55 px-4 py-3 text-sm text-muted">Looking For</div>
+              <div className="rounded-lg border border-white/55 bg-[#f2ece8]/55 px-4 py-3 text-sm text-muted">Preferred Location</div>
             </div>
             <Link href="/contact" className="mt-5 flex justify-center btn-primary">
               Get Project Details

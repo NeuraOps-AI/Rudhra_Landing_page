@@ -9,7 +9,7 @@ const statuses = [
 
 export default function ProjectsPage() {
   return (
-    <section className="section-pad bg-mist">
+    <section className="section-pad">
       <div className="container-soft">
         <div className="max-w-3xl">
           <p className="eyebrow">Explore communities</p>

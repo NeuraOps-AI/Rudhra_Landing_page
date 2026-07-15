@@ -35,15 +35,15 @@ const metrics = [
 
 export function TrustMetrics() {
   return (
-    <section className="relative z-20 -mt-16 sm:-mt-14">
-      <div className="container-soft overflow-hidden rounded-[1.5rem] border border-white/80 bg-[radial-gradient(circle_at_14%_0%,rgba(200,217,230,0.76),transparent_34%),radial-gradient(circle_at_88%_18%,rgba(245,239,235,0.9),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.96),rgba(238,245,248,0.9))] shadow-[0_26px_72px_rgba(47,65,86,0.13)] backdrop-blur-xl">
-        <div className="grid gap-px bg-navy/8 sm:grid-cols-2 lg:grid-cols-4">
+    <section className="relative z-20 -mt-16 pb-10 sm:-mt-14">
+      <div className="container-soft overflow-hidden rounded-[1.5rem] border border-white/60 bg-[linear-gradient(145deg,rgba(238,231,226,0.96)_0%,rgba(226,216,210,0.98)_54%,rgba(186,205,214,0.92)_100%)] shadow-[0_30px_78px_rgba(47,65,86,0.26)] backdrop-blur-xl">
+        <div className="grid gap-px bg-navy/18 sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric) => (
             <div
               key={metric.label}
-              className="group relative flex min-h-[8.5rem] gap-4 bg-white/72 px-5 py-5 transition duration-300 hover:bg-white/88"
+              className="group relative flex min-h-[8.5rem] gap-4 bg-[linear-gradient(145deg,rgba(238,231,226,0.84),rgba(185,205,214,0.72))] px-5 py-5 transition duration-300 hover:bg-[#e2d8d2]/86"
             >
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[linear-gradient(135deg,#C8D9E6,#F5EFEB)] text-navy shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_10px_24px_rgba(47,65,86,0.08)] ring-1 ring-white/70 transition duration-300 group-hover:-translate-y-0.5 group-hover:text-teal">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[linear-gradient(135deg,#c1d1d8,#eee7e2)] text-navy shadow-[inset_0_1px_0_rgba(255,255,255,0.72),0_10px_24px_rgba(47,65,86,0.16)] ring-1 ring-white/62 transition duration-300 group-hover:-translate-y-0.5 group-hover:text-teal">
                 <svg
                   viewBox="0 0 24 24"
                   aria-hidden="true"

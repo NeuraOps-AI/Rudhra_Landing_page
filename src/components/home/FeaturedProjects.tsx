@@ -6,7 +6,7 @@ export function FeaturedProjects() {
   const featured = projects.filter((project) => project.status === "ongoing").slice(0, 3);
 
   return (
-    <section className="section-pad bg-white">
+    <section className="pb-[clamp(3.5rem,7vw,6.5rem)] pt-4 sm:pt-4 lg:pt-4">
       <div className="container-soft">
         <div className="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>

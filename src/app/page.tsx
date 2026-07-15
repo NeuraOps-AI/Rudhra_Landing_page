@@ -28,9 +28,9 @@ export default function Home() {
       <LifestyleShowcase />
       <FeaturedProjects />
       <ProjectTabs />
-      <section id="why-rudhra" className="section-pad bg-beige">
+      <section id="why-rudhra" className="section-pad">
         <div className="container-soft">
-          <div className="rounded-2xl bg-white p-6 shadow-soft md:p-8">
+          <div className="rounded-2xl border border-white/55 bg-[linear-gradient(145deg,rgba(238,231,226,0.94),rgba(186,205,214,0.82))] p-6 shadow-[0_24px_64px_rgba(47,65,86,0.24)] md:p-8">
             <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
               <div>
                 <p className="eyebrow">Why families choose Rudhra</p>
@@ -45,7 +45,7 @@ export default function Home() {
               <div className="grid gap-5 md:grid-cols-3">
                 {familyReasons.map((reason) => (
                   <div key={reason.title} className="border-l border-navy/15 pl-5">
-                    <div className="mb-4 h-11 w-11 rounded-xl border border-navy/15 bg-mist" />
+                    <div className="mb-4 h-11 w-11 rounded-xl border border-white/55 bg-[linear-gradient(135deg,#bfd0d8,#eee7e2)]" />
                     <h3 className="text-base font-extrabold text-navy">{reason.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-muted">{reason.copy}</p>
                   </div>
